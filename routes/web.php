@@ -21,6 +21,9 @@ Route::post('/signup', 'UserController@postSignup');
 
 Route::get('/logout', 'UserController@logout');
 
+Route::get('/search', 'IndexController@search');
+Route::get('/search2', 'IndexController@search2');
+
 Route::get('/shop', 'ShopController@index');
 Route::get('/shop/{category_id}', 'ShopController@category');
 Route::get('/shop/{category_id}/{product_id}', 'ShopController@product');
@@ -42,7 +45,3 @@ Route::prefix('basket')->group(function () {
     Route::get('/checkout', 'BasketController@checkout');
     Route::post('/deleteProduct', 'BasketController@deleteProduct');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

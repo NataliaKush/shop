@@ -1,4 +1,8 @@
- <h3>Create product</h3>
+ @extends('layouts.admin')
+
+@section('content')
+
+    <h3>Create product</h3>
 
     <form action="" method="post" enctype="multipart/form-data">
         @csrf
